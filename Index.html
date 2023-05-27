@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>My Useless Buggy Application</title>
+    <style>
+        body {
+            background-image: url('new.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            animation: flicker 3s infinite;
+        }
+
+        @keyframes flicker {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            color: green;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+		
+		h1.hover{
+		color: black;
+		}
+
+        .auth-form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .auth-form h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+			color: black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+        }
+
+        button[type="submit"] {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            color: black;
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>My Useless Buggy Application </h1>
+        <div class="auth-form">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <input type="text" name="username" placeholder="Username" required><br>
+                <input type="password" name="password" placeholder="Password" required><br>
+                <button type="submit">Login</button>
+            </form>
+            <p>New user? <a href="/signup.html">Sign up</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
